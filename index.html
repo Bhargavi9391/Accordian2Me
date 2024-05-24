@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Accordian</title>
+     <link rel="icon" href="shuzi.png">
+     <style>
+          body{
+               background-color: rgb(66, 138, 134);
+          }
+          .container{
+               width:50%;
+               height: 200px;
+               border: 1px solid gray;
+               border-radius: 1px;
+               margin-left: 310px;
+               margin-top: 200px;
+               height: auto;
+               background-color:white;
+               
+          }
+          #demo1,#demo2,#demo3{
+               font-size: 20px;
+               padding-left: 10px;
+               padding-right: 10px;
+               color:rgb(60, 0, 170);
+               font-weight: bold;
+               cursor: pointer;
+               padding-bottom: 5px;
+               
+               
+          }
+          
+          #demo1:hover{
+             background-color: rgb(202, 187, 187);
+               
+          }
+          #demo2:hover{
+             background-color: rgb(202, 187, 187);
+               
+          }
+          #demo3:hover{
+             background-color: rgb(202, 187, 187);
+               
+          }
+          .show{
+               color:black;
+               padding-left: 10px;
+               font-size: 20px;
+               font-family: sans-serif;
+          
+          }
+          .show:hover{
+               background-color: gray;
+               cursor: pointer;
+          }
+         #show3{
+          padding-bottom: 5px;
+         }
+        
+         
+     </style>
+</head>
+<body>
+    
+     <div class="container">
+     <div id="demo1">
+          <h2>Section 1</h2>
+          
+          </div>
+          <div id="show1" class="show">
+     
+     </div>
+     <hr></hr>
+     <div id="demo2">
+          <h2>Section 2</h2>
+          
+     </div>
+          <div id="show2" class="show">
+     </div>
+     <hr></hr>
+     <div id="demo3">
+          <h2>Section 3</h2>
+     </div>
+          <div id="show3" class="show">
+     </div>
+     </div>
+     <script>
+     document.getElementById('demo1').addEventListener('click', () => {
+    let dem1 = "Lorem ipsum dolor sit amet, Ut enim ad minim veniam, exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat";
+    document.getElementById('show1').innerText = dem1;
+    document.getElementById('show1').style.display = 'block';
+});
+
+document.getElementById('demo1').addEventListener('dblclick', () => {
+    let showElement = document.getElementById('show1');
+    showElement.style.display = (showElement.style.display === 'none' || showElement.style.display === '') ? 'block' : 'none';
+});
+
+          document.getElementById('demo2').addEventListener('click',()=>{
+               let dem1="Lorem ipsum dolor sit amet,Ut enim ad minim veniam, exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat";
+               document.getElementById('show2').innerText=dem1;
+               document.getElementById('show2').style.display='block';
+          });
+               document.getElementById('demo2').addEventListener('dblclick',()=>{
+                    let ele=document.getElementById('show2');
+                    ele.style.display=(ele.style.display==='none'||ele.style.display==='')?'block':'none';
+               });
+
+               document.getElementById('demo3').addEventListener('click',()=>{
+               let dem1="Lorem ipsum dolor sit amet,Ut enim ad minim veniam, exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat";
+               document.getElementById('show3').innerText=dem1;
+               document.getElementById('show3').style.display='block';
+          });
+               document.getElementById('demo3').addEventListener('dblclick',()=>{
+                    let ele=document.getElementById('show3');
+                    ele.style.display=(ele.style.display==='none'||ele.style.display==='')?'block':'none';
+               });
+              
+              
+          
+          
+          
+     </script>
+
+     
+     
+</body>
+</html>
